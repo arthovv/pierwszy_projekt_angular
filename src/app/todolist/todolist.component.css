@@ -1,0 +1,19 @@
+﻿h1, h2,
+h3, h4, h5, h6 {
+  color: #8000ff;
+}
+ul{
+  list-style:none;
+}
+
+
+.delete-symbol:hover{
+  cursor:pointer;
+}
+.reset-button{
+  transform:scale(0.8);
+}
+
+.toBuyElement.done {
+  text-decoration: line-through;
+}

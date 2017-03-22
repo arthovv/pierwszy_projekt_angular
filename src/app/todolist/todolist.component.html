@@ -1,0 +1,18 @@
+﻿
+<app-root></app-root>
+
+<h2>{{title}}</h2> 
+
+<label>
+    Co kupić? : <input type="text" [(ngModel)]="newToBuy" (keyup.enter)="addToBuy()"/>
+</label>
+<button type="submit" (click)="addToBuy()">Dodaj</button>
+<ul>
+  <li *ngFor="let toBuy of toBuyArr; let i=index">
+    <input type="checkbox" name="name" [(ngModel)]="toBuy.complete"  />
+    <span class="toBuyElement" [ngClass]="{'done':toBuy.complete}"> {{i+1}}. {{toBuy.title}}</span>
+    <span title="Usuń" class="delete-symbol" (click)="deleteToBuy(i)">&#9746;</span>
+    <br />
+  </li>
+</ul>
+
